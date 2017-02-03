@@ -1,0 +1,28 @@
+@import "../fonts/fonts";
+@import "_misc/varibles";
+@import "_misc/mixins";
+@import "bootstrap.min";
+@import "../../bower_components/normalize.css/normalize.css";
+@import "../../bower_components/font-awesome/css/font-awesome";
+@import "../../bower_components/animate.css/animate.css";
+@import "_misc/settings";
+
+//PARTIALS:
+@import "_misc/sprite";
+@import "partials/header";
+@import "partials/features";
+@import "partials/features-part-2";
+@import "partials/works";
+@import "partials/mean-our-team";
+@import "partials/some-fun-fact";
+@import "partials/discus";
+@import "partials/footer";
+@import "partials/error-form";
+
+//media
+@import "_misc/adaptive";
+
+
+
+
+

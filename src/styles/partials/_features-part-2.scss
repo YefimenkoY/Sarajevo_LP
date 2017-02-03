@@ -1,0 +1,41 @@
+.part-2 {
+  background: #fff;
+  background-attachment: fixed;
+  color: #000;
+
+  li {
+    margin-top: 60px;
+  }
+}
+
+.feature-desc {
+  text-align: center;
+  width: 790px;
+  margin: 0 auto;
+  margin-top: 85px;
+  margin-bottom: 60px;
+
+  p {
+    @include font-source-sans($font-Open-sans, 15px, $text-blue, 400)
+  }
+}
+
+.part-img {
+  @include inlineblock(top);
+  width: 10%;
+  margin-right: 40px;
+}
+
+.part-text {
+  @include inlineblock(top);
+  width: 70%;
+
+  h5 {
+    @include font-source-sans($font-Open-sans, 18px, $text-blue, 600);
+    margin-bottom: 20px;
+  }
+
+  p {
+    @include font-source-sans($font-Open-sans, 12px, $text-blue, 400)
+  }
+}

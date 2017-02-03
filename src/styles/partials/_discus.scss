@@ -1,0 +1,117 @@
+.discus {
+  background: #fff;
+
+  .title--discuss {
+    margin-bottom: 30px;
+
+    &:after, &:before {
+      bottom: 48px;
+    }
+  }
+
+  .text {
+    text-align: center;
+    @include font-source-sans($font-Lato, 18px, rgba($text-blue, .8), 400);
+  }
+
+  .discuss-forms {
+    border-top: 1px dotted $grey;
+    margin-top: 50px;
+    border-bottom: 1px dotted $grey;
+    padding-top: 30px;
+    margin-bottom: 65px;
+
+    .address {
+      @include laptop(){
+        text-align: center;
+      }
+      h3 {
+        font-size: 18px;
+        color: $text-blue;
+        font-weight: 600;
+        margin-bottom: 25px;
+      }
+
+      p {
+        line-height: 25px;
+      }
+    }
+
+    h3 {
+      @include font-source-sans($font-Open-sans, 20px, $text-blue, bold);
+    }
+
+    form {
+      text-align: right;
+
+      input[type="text"],
+      input[type="email"] {
+        border-image: none;
+        border-width: 0;
+        border-bottom: 2px solid rgba($text-blue, .2);
+        padding: 15px 0;
+        outline: none;
+        width: 100%;
+        margin-bottom: 25px;
+      }
+
+      input[type="submit"] {
+        width: 100px;
+        display: inline-block;
+        background: transparent;
+        border: none;
+        @include font-source-sans($font-Open-sans, 13px, #000, 400);
+        outline: none;
+        margin-bottom: 25px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .fa {
+        color: $blue;
+        font-size: 16px;
+      }
+    }
+
+    .forms-social {
+      text-align: center;
+      a {
+        width: 100%;
+        font-size: 25px;
+        display: inline-block;
+        color: $grey;
+        margin-bottom: 15px;
+        @include laptop() {
+          width: 20%;
+        }
+
+        i {
+          &:hover {
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+}
+
+.map {
+  height: 185px;
+  background: url("../img/bg/Map.jpg") 100% no-repeat;
+  background-size: cover;
+  position: relative;
+
+  i {
+    position: absolute;
+    left: 400px;
+    top: 100px;
+    font-size: 24px;
+    color: rgba($blue, 1);
+    @include tablets() {
+      display: none;
+    }
+  }
+}
+

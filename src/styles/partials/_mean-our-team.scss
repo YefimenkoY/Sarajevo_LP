@@ -1,0 +1,116 @@
+.meat-our-team {
+  background: #fff;
+  transition: all .5s;
+
+  @include tablets {
+    margin-top: -200px;
+  }
+
+}
+
+.team-p {
+  text-align: center;
+  margin-bottom: 140px;
+
+  p {
+    @include font-source-sans($font-Open-sans, 14px, $text-blue, 400);
+  }
+}
+
+.team {
+  margin-bottom: 110px;
+}
+
+.team-list {
+  margin-top: -100px;
+
+  li {
+    @include phones() {
+      //padding-right: 120px;
+    }
+  }
+
+  .team-img {
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+
+    &:hover {
+      .team-hover {
+        display: block;
+      }
+
+    }
+
+    .team-hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba($blue, .8);
+      text-align: center;
+      display: none;
+
+
+      .hover-img {
+        margin-top: 20px;
+      }
+
+      .hover-text {
+        margin-top: 10px;
+        color: #fff;
+        padding: 10px;
+      }
+
+      a {
+        background: rgba(#2824A2, .8);
+        width: 35px;
+        height: 35px;
+        display: inline-block;
+        margin-right: 3px;
+        text-align: center;
+        padding-top: 8px;
+
+        &:hover {
+          .fa {
+            color: black;
+            transition: all .3s;
+          }
+        }
+        
+        .fa {
+          font-size: 20px;
+          color: #fff;
+          display: inline-block;
+        }
+      }
+
+
+    }
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+    height: 250px;
+  }
+
+  .team-name {
+    text-align: center;
+    margin-top: 15px;
+
+    h4 {
+      @include font-source-sans($font-Open-sans, 14px, $text-blue, 600);
+      margin-bottom: 10px;
+    }
+
+    p {
+      @include font-source-sans($font-Open-sans, 10px, $text-blue, 400);
+    }
+  }
+}
+
+

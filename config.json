@@ -1,0 +1,37 @@
+{
+  "build": {
+    "html": "build/",
+    "js": "build/js/",
+    "css": "build/css/",
+    "img": "build/img/",
+    "fonts": "build/fonts/"
+  },
+  "src": {
+    "html": "src/*.html",
+    "js": [
+      "./bower_components/jquery/dist/jquery.min.js",
+      "./bower_components/wow/dist/wow.min.js",
+      "src/js/**/*.js"
+    ],
+    "style": "src/styles/main.scss",
+    "img": "src/img/**/*.*",
+    "fonts": "src/fonts/**/*.*"
+  },
+  "watch": {
+    "html": "src/**/*.html",
+    "js": "src/js/**/*.js",
+    "style": "src/styles/**/*.scss",
+    "img": "src/img/**/*.*",
+    "fonts": "src/fonts/**/*.*"
+  },
+  "clean": "./build",
+  "server-config": {
+    "server": {
+      "baseDir": "./build"
+    },
+    "tunnel": "true",
+    "host": "localhost",
+    "port": 9000,
+    "logPrefix": "Frontend_Devil"
+  }
+}

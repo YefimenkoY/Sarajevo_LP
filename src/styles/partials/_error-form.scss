@@ -1,0 +1,54 @@
+.form-name,
+.form-email,
+.form-massage {
+  position: relative;
+}
+
+.error-name,
+.error-email,
+.error-massage {
+  text-align: center;
+  color: #fb1619;
+  background: #918bd6;
+  padding: rem(2px);
+  position: absolute;
+  display: none;
+  font-size: rem(12px);
+  top: -15px;
+  left: 50%;
+  margin-left: rem(-100px);
+  box-shadow: 0 3px 3px rgba($blue, .5);
+  width: rem(200px);
+
+  p {
+    margin: 0;
+    font-size: 11px;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    background: #918bd6;
+    width: rem(12px);
+    height: rem(12px);
+    position: absolute;
+    top: 100%;
+    margin-top: -6px;
+    right: 50%;
+    margin-right: -6px;
+    transform: rotate(45deg)
+  }
+}
+
+.popup {
+  position: fixed;
+  color: #fff;
+  top: 58px;
+  right: 10px;
+  padding: 10px;
+  background: $blue;
+  box-shadow: 0 5px 5px rgba(#000, .5);
+  font-size: 15px;
+  display: none;
+}
+

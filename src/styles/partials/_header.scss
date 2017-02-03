@@ -1,0 +1,225 @@
+header {
+  background: grey url("../img/bg/headef-bg.jpg") center no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-bottom: rem(200px);
+
+  .header-top {
+    background: rgba($blue, .2);
+    margin-left: rem(13px);
+    height: rem(70px);
+    z-index:11;
+    width: 100%;
+  }
+
+  .header-active {
+    position: fixed;
+    background: #1B2937;
+    color: #fff;
+    width: 107%;
+  }
+}
+
+.header-content {
+  overflow: hidden;
+}
+
+.logo {
+  padding-top: rem(15px);
+  @include inlineblock(top);
+  padding-right: rem(23px);
+
+  a {
+    text-decoration: none;
+    display: inline-block;
+
+  }
+
+  p {
+    @include font-source-sans($font-Lato, rem(25px), #fff, bold);
+    display: inline-block;
+    text-decoration: none;
+    margin: 0;
+  }
+  span {
+    text-decoration: none;
+    @include font-source-sans($font-Lato, rem(30px), $blue, regular);
+    @include laptop() {
+      @include font-source-sans($font-Lato, rem(25px), $blue, regular);
+    }
+  }
+}
+
+.desc {
+  @include inlineblock(top);
+  padding-top: rem(15px);
+  @include desktop() {
+    display: none;
+  }
+
+  p {
+    @include font-source-sans($font-Lato, rem(15px), #757378, bold);
+    border-left: 1px solid $blue;
+    padding-left: rem(25px);
+    font-size: rem(14px);
+    font-weight: 600;
+  }
+}
+
+.nav {
+  text-align: right;
+  font-size: 0;
+  @include laptop() {
+    left: -20px;
+    position: absolute;
+    text-align: left;
+  }
+  @include tablets() {
+    display: none;
+  }
+
+  li {
+    display: inline-block;
+
+    a {
+      padding: rem(25px);
+      display: inline-block;
+      text-decoration: none;
+      @include font-source-sans($font-Lato, rem(14px), #fff, 400);
+      @include laptop() {
+        padding: rem(20px);
+      }
+      
+      &:hover {
+        color: rgba($blue, 1);
+      }
+
+      p {
+        margin: 0;
+        position: relative;
+      }
+    }
+  }
+}
+
+.nav-active {
+  color: $blue;
+
+  p:before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: $blue;
+    top: rem(-25px);
+  }
+}
+
+.header-cont, .socials {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.header-content {
+  margin-top: rem(100px);
+  text-align: center;
+  position: relative;
+  z-index: 100;
+
+  h1 {
+    @include font-source-sans($font-Lato, rem(60px), #fff, bold);
+    margin-bottom: 0;
+
+    span {
+      color: $blue;
+    }
+  }
+
+  span {
+    @include font-source-sans($font-Open-sans, rem(40px), $blue, regular)
+  }
+
+  h3 {
+    @include font-source-sans($font-Open-sans, rem(40px), #757378, regular);
+  }
+
+  p {
+    @include font-source-sans($font-Lato, rem(18px), #fff)
+  }
+}
+
+.socials {
+  margin-top: rem(100px);
+
+  li {
+    display: inline-block;
+    margin-right: rem(15px);
+
+    &:last-child {
+      margin-right: 0;
+    }
+    
+    a {
+      color: #8d8585;
+      font-size: rem(28px);
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+  }
+}
+
+.mouse-icon {
+  border: 2px solid rgba(#fff, .8);
+  border-radius: 16px;
+  display: block;
+  height: 50px;
+  display: inline-block;
+  position: absolute;
+  width: 30px;
+  left: 50%;
+  margin-top: 60px;
+  margin-left: -15px;
+  @include phones {
+    margin-top: 50px;
+  }
+
+  .scroll {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 10px;
+    height: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 4px;
+    width: 4px;
+
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-name: scrolling;
+    animation-play-state: running;
+    animation-timing-function: linear;
+  }
+
+  @keyframes scrolling {
+    0% {
+      opacity: 0;
+      top: 5px;
+    }
+    30% {
+      opacity: 1;
+      top: 10px;
+    }
+    100% {
+      opacity: 0;
+      top: 25px;
+    }
+  }
+}
+
+
